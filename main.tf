@@ -10,9 +10,9 @@ resource "aws_instance" "ubuntu" {
 
   # Set the instance details (tags, SSH key, etc.)
   tags = {
-    Name = "MAHAD-WEBSRV-1"
+    Name = "MORPHIUS-WEBSRV-1"
   }
-  key_name = "MAHAD-WEBSRV-1"                  # Set the name of your SSH key pair here
+  key_name = "MORPHIUS-WEBSRV-1"                  # Set the name of your SSH key pair here
 
   # Set the network details (VPC, subnets, security groups, etc.)
   vpc_security_group_ids = [ "sg-05414c02d7983f7ea" ]   # Set the ID of your security group here
