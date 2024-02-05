@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-east-1"   # Set your desired region here
-   access_key = ""
-   secret_key = ""
+   access_key = "*****"
+   secret_key = "*****"
 }
 
 resource "aws_instance" "ubuntu" {
@@ -12,7 +12,7 @@ resource "aws_instance" "ubuntu" {
   tags = {
     Name = "MORPHIUS-WEBSRV-1"
   }
-  key_name = "MORPHIUS-WEBSRV-1"                  # Set the name of your SSH key pair here
+  key_name = "KEY-MORPHIUS-WEBSRV-1"                  # Set the name of your SSH key pair here
 
   # Set the network details (VPC, subnets, security groups, etc.)
   vpc_security_group_ids = [ "sg-05414c02d7983f7ea" ]   # Set the ID of your security group here
@@ -21,8 +21,8 @@ resource "aws_instance" "ubuntu" {
   # Provision the instance with user data (cloud-init) to install Apache web server
   user_data = <<-EOF
               #!/bin/bash
-              sudo apt update
-              sudo apt install -y apache2
+              apt update
+              apt install -y apache2
               EOF
 }
 
