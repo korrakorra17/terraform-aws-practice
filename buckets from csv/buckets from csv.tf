@@ -1,3 +1,5 @@
+#creates buckets from a list of buckets in a csv file called buckets.csv
+
 #the following line means : user of this script needs terraform 5.0 or greater
 terraform {
   required_providers {
